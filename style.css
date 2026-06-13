@@ -1,0 +1,133 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+body{
+    height:100vh;
+    background:#010b1d;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    color:white;
+}
+
+
+/* Background Glow */
+
+.blue-glow,
+.green-glow{
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    filter:blur(120px);
+}
+
+
+.blue-glow{
+    background:#204cff;
+    top:-120px;
+    left:-150px;
+}
+
+
+.green-glow{
+    background:#00ff73;
+    right:-150px;
+}
+
+
+/* Counter Box */
+
+.container{
+    z-index:10;
+    text-align:center;
+}
+
+
+h1{
+    font-size:60px;
+    margin-bottom:40px;
+}
+
+
+/* Glass Card */
+
+.buttons{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.2);
+    backdrop-filter:blur(15px);
+
+    padding:25px 40px;
+    border-radius:20px;
+
+    display:flex;
+    gap:20px;
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,.4);
+}
+
+
+/* Buttons */
+
+button{
+    border:none;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+
+    padding:15px 25px;
+    border-radius:15px;
+
+    cursor:pointer;
+    transition:.3s;
+}
+
+
+button:hover{
+    transform:translateY(-5px);
+    filter:brightness(120%);
+}
+
+
+.green{
+    background:#127a45;
+}
+
+
+.red{
+    background:#8c2b2b;
+}
+
+
+.blue{
+    background:#1f4dbb;
+}
+
+
+.reset{
+    background:#7a1f1f;
+}
+
+
+/* Responsive */
+
+@media(max-width:700px){
+
+    h1{
+        font-size:38px;
+    }
+
+
+    .buttons{
+        flex-direction:column;
+        width:90vw;
+    }
+
+}
